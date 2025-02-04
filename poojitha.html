@@ -219,7 +219,7 @@
                     terminal.style.display = "none";
                     document.getElementById("loveMessage").style.display = "block";
                     document.getElementById("loveMusic").play();
-                    setTimeout(showExitInput, 5000);
+                    setTimeout(showExitInput, 11000);
                 }, 3000);
             }
         }
@@ -236,7 +236,7 @@
             } else if (this.value.toLowerCase() === "poopiii") {
                 // Stop the love music immediately
                 document.getElementById("loveMusic").pause();
-                document.getElementById("loveMusic").currentTime =2; // Reset the audio to start
+                document.getElementById("loveMusic").currentTime =1; // Reset the audio to start
 
                 // Display poop image in full screen and play fart sound
                 let poopImage = document.getElementById("poopImage");
