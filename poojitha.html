@@ -202,18 +202,28 @@
         ];
 
         let i = 0;
+
         function typeEffect() {
             if (i < messages.length) {
-                let span = document.createElement("span");
-                span.classList.add("glitch");
-                span.textContent = "> " + messages[i];
-                terminal.appendChild(span);
-                terminal.appendChild(document.createElement("br"));
+                let message = messages[i];
+                let j = 0;
+                function typeLetter() {
+                    if (j < message.length) {
+                        let span = document.createElement("span");
+                        span.classList.add("glitch");
+                        span.textContent = message[j];
+                        terminal.appendChild(span);
+                        terminal.appendChild(document.createElement("br"));
 
-                document.getElementById("typingSound").play();
+                        document.getElementById("typingSound").play();
 
+                        j++;
+                        setTimeout(typeLetter, Math.random() * 150 + 50); // Random delay for glitchy effect
+                    }
+                }
+                typeLetter();
                 i++;
-                setTimeout(typeEffect, 2000);
+                setTimeout(typeEffect, message.length * (Math.random() * 100 + 50)); // Random delay between messages
             } else {
                 setTimeout(() => {
                     terminal.style.display = "none";
@@ -236,7 +246,7 @@
             } else if (this.value.toLowerCase() === "poopiii") {
                 // Stop the love music immediately
                 document.getElementById("loveMusic").pause();
-                //document.getElementById("loveMusic").currentTime = 0; // Reset the audio to start
+                document.getElementById("loveMusic").currentTime = 10; // Reset the audio to start
 
                 // Display poop image in full screen and play fart sound
                 let poopImage = document.getElementById("poopImage");
