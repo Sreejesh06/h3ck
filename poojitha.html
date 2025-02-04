@@ -100,9 +100,13 @@
 
         #poopImage {
             display: none;
-            width: 150px;
-            height: auto;
-            margin-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            z-index: 9999; /* Ensure it appears on top */
         }
 
     </style>
@@ -230,9 +234,14 @@
             if (this.value.toLowerCase() === "poojitha") {
                 exitFullscreen();
             } else if (this.value.toLowerCase() === "poopiii") {
-                // Display poop image and play fart sound
-                document.getElementById("poopImage").style.display = "block";
-                document.getElementById("fartSound").play();
+                // Stop the love music immediately
+                document.getElementById("loveMusic").pause();
+                document.getElementById("loveMusic").currentTime = 0; // Reset the audio to start
+
+                // Display poop image in full screen and play fart sound
+                let poopImage = document.getElementById("poopImage");
+                poopImage.style.display = "block"; // Show image
+                document.getElementById("fartSound").play(); // Play fart sound
             }
         });
 
