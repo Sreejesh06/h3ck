@@ -48,18 +48,22 @@
             text-align: center;
             animation: backgroundGlitch 1s infinite;
         }
+
         #terminal {
             width: 100%;
             height: 100vh;
             padding-top: 20px;
         }
+
         .glitch {
             display: inline-block;
             animation: glitch 0.2s infinite, flicker 1.5s infinite;
         }
+
         .colorChange {
             animation: colorChange 2s infinite;
         }
+
         #loveMessage {
             display: none;
             font-size: 40px;
@@ -68,16 +72,19 @@
             margin-top: 20%;
             animation: fadeIn 2s ease-in-out, colorChange 2s infinite;
         }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
         #exitMessage {
             display: none;
             color: white;
             margin-top: 20px;
             font-size: 18px;
         }
+
         input {
             display: none;
             font-size: 18px;
@@ -90,6 +97,14 @@
             border-bottom: 2px solid lime;
             outline: none;
         }
+
+        #poopImage {
+            display: none;
+            width: 150px;
+            height: auto;
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -99,9 +114,130 @@
     <div id="exitMessage">To escape, type the secret code:</div>
     <input type="text" id="exitInput" placeholder="Enter secret code...">
 
+    <!-- Poop Image and Fart Sound -->
+    <img id="poopImage" src="<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Breach</title>
+    <style>
+        @keyframes glitch {
+            0% { transform: translate(2px, -2px); }
+            25% { transform: translate(-2px, 2px); }
+            50% { transform: translate(3px, -3px); }
+            75% { transform: translate(-3px, 3px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                opacity: 1;
+            }
+            20%, 24%, 55% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes backgroundGlitch {
+            0% { background-position: 0 0; }
+            20% { background-position: -5px -5px; }
+            40% { background-position: 5px 5px; }
+            60% { background-position: -5px 5px; }
+            80% { background-position: 5px -5px; }
+            100% { background-position: 0 0; }
+        }
+
+        @keyframes colorChange {
+            0% { color: lime; }
+            50% { color: red; }
+            100% { color: lime; }
+        }
+
+        body {
+            background-color: black;
+            color: lime;
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+            padding: 20px;
+            white-space: pre-line;
+            overflow: hidden;
+            text-align: center;
+            animation: backgroundGlitch 1s infinite;
+        }
+
+        #terminal {
+            width: 100%;
+            height: 100vh;
+            padding-top: 20px;
+        }
+
+        .glitch {
+            display: inline-block;
+            animation: glitch 0.2s infinite, flicker 1.5s infinite;
+        }
+
+        .colorChange {
+            animation: colorChange 2s infinite;
+        }
+
+        #loveMessage {
+            display: none;
+            font-size: 40px;
+            color: red;
+            text-align: center;
+            margin-top: 20%;
+            animation: fadeIn 2s ease-in-out, colorChange 2s infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        #exitMessage {
+            display: none;
+            color: white;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        input {
+            display: none;
+            font-size: 18px;
+            padding: 10px;
+            margin-top: 10px;
+            text-align: center;
+            border: none;
+            background: black;
+            color: lime;
+            border-bottom: 2px solid lime;
+            outline: none;
+        }
+
+        #poopImage {
+            display: none;
+            width: 150px;
+            height: auto;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="terminal"></div>
+    <div id="loveMessage">❤️ YOU'VE BEEN HACKED BY LOVE ❤️<br>I LOVE YOU, POOJITHA! 💖</div>
+    <div id="exitMessage">To escape, type the secret code:</div>
+    <input type="text" id="exitInput" placeholder="Enter secret code...">
+
+    <!-- Poop Image and Fart Sound -->
+    <img id="poopImage" src="HBLsWkWTaC-2.png" alt="Poop" />
+    <audio id="fartSound" src="fart-145914.mp3"></audio>
+
     <!-- Audio elements for typing and romantic background music -->
-    <audio id="typingSound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
-    <audio id="loveMusic" src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" loop></audio>
+    <audio id="typingSound" src="beepbeepbeep-53921.mp3"></audio>
+    <audio id="loveMusic" src="makeyoumine.mp3" loop></audio>
 
     <script>
         function goFullscreen() {
@@ -156,65 +292,28 @@
 
         let terminal = document.getElementById("terminal");
         let messages = [
-    "Initializing system breach...",
-    "Bypassing firewall...",
-    "Accessing device files...",
-    "Uploading payload...",
-    "System control: 100% achieved!",
-    "Displaying final message...",
-    "Decrypting encrypted files...",
-    "Running diagnostic...",
-    "Scanning system for vulnerabilities...",
-    "Accessing private data...",
-    "Establishing remote connection...",
-    "Deploying malware...",
-    "Analyzing network traffic...",
-    "Compromising security protocols...",
-    "Extracting sensitive information...",
-    "Gaining administrator access...",
-    "Monitoring target system...",
-    "Bypassing password protection...",
-    "Disabling security mechanisms...",
-    "Injecting code...",
+            "Initializing system breach...",
+            "Bypassing firewall...",
+            "Accessing device files...",
+            "Uploading payload...",
+            "System control: 100% achieved!",
+            "Displaying final message...",
+            "Decrypting encrypted files...",
+            "Running diagnostic...",
+            "Scanning system for vulnerabilities...",
+            "Accessing private data...",
+            "Establishing remote connection...",
+            "Deploying malware...",
+            "Analyzing network traffic...",
+            "Compromising security protocols...",
+            "Extracting sensitive information...",
+            "Gaining administrator access...",
+            "Monitoring target system...",
+            "Bypassing password protection...",
+            "Disabling security mechanisms...",
+            "Injecting code..."
+        ];
 
-    "Testing system defenses...",
-    "Access granted to restricted areas...",
-    "Bypassing user login security...",
-    "System security bypassed...",
-    "Injecting web shell...",
-    "Completing system exploit...",
-    "Triggering network vulnerabilities...",
-    "Bypassing encrypted traffic...",
-    "Disabling encryption keys...",
-    "Accessing restricted network traffic...",
-    "Breaking through cloud storage defenses...",
-    "Unlocking encrypted communication channels...",
-    "Monitoring unauthorized access points...",
-    "Bypassing data protection systems...",
-    "Cracking security systems...",
-    "Running backdoor exploit...",
-    "Injecting malicious script...",
-    "Hijacking network traffic...",
-    "Deactivating security measures...",
-    "Bypassing security firewall...",
-    "Cracking network protocols...",
-    "Modifying admin configurations...",
-    "Deploying spyware...",
-    "Running system attack simulations...",
-    "Breaking data encryption...",
-    "Unlocking hidden network features...",
-    "Testing system firewalls...",
-    "Cracking data access passwords...",
-    "Monitoring sensitive systems...",
-    "Hijacking user login credentials...",
-    "Breaking through user authentication...",
-    "Modifying server configurations...",
-    "Completing data collection...",
-    "Bypassing all system controls...",
-    "Finalizing system hack..."
-];
-
-        
         let i = 0;
         function typeEffect() {
             if (i < messages.length) {
@@ -223,9 +322,9 @@
                 span.textContent = "> " + messages[i];
                 terminal.appendChild(span);
                 terminal.appendChild(document.createElement("br"));
-                
+
                 document.getElementById("typingSound").play();
-                
+
                 i++;
                 setTimeout(typeEffect, 2000);
             } else {
@@ -245,8 +344,141 @@
         }
 
         document.getElementById("exitInput").addEventListener("input", function() {
-            if (this.value.toLowerCase() === "poopiii") {
+            if (this.value.toLowerCase() === "poojitha") {
                 exitFullscreen();
+            } else if (this.value.toLowerCase() === "poopiii") {
+                // Display poop image and play fart sound
+                document.getElementById("poopImage").style.display = "block";
+                document.getElementById("fartSound").play();
+            }
+        });
+
+        document.addEventListener("click", () => {
+            goFullscreen();
+            setTimeout(typeEffect, 1000);
+        });
+    </script>
+
+</body>
+</html>
+" alt="Poop" />
+    <audio id="fartSound" src="https://pixabay.com/sound-effects/fart-145914/"></audio>
+
+    <!-- Audio elements for typing and romantic background music -->
+    <audio id="typingSound" src="https://pixabay.com/sound-effects/beepbeepbeep-53921/"></audio>
+    <audio id="loveMusic" src="https://soundcloud.com/aniket-singh-731333007/co2-slowed-reverb-prateek?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" loop></audio>
+
+    <script>
+        function goFullscreen() {
+            let elem = document.documentElement;
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) {
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+            }
+        }
+
+        function exitFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+            alert("You have successfully escaped!");
+        }
+
+        document.addEventListener("fullscreenchange", () => {
+            if (!document.fullscreenElement) {
+                goFullscreen();
+            }
+        });
+
+        document.addEventListener("mozfullscreenchange", () => {
+            if (!document.mozFullScreenElement) {
+                goFullscreen();
+            }
+        });
+
+        document.addEventListener("webkitfullscreenchange", () => {
+            if (!document.webkitFullscreenElement) {
+                goFullscreen();
+            }
+        });
+
+        document.addEventListener("msfullscreenchange", () => {
+            if (!document.msFullscreenElement) {
+                goFullscreen();
+            }
+        });
+
+        let terminal = document.getElementById("terminal");
+        let messages = [
+            "Initializing system breach...",
+            "Bypassing firewall...",
+            "Accessing device files...",
+            "Uploading payload...",
+            "System control: 100% achieved!",
+            "Displaying final message...",
+            "Decrypting encrypted files...",
+            "Running diagnostic...",
+            "Scanning system for vulnerabilities...",
+            "Accessing private data...",
+            "Establishing remote connection...",
+            "Deploying malware...",
+            "Analyzing network traffic...",
+            "Compromising security protocols...",
+            "Extracting sensitive information...",
+            "Gaining administrator access...",
+            "Monitoring target system...",
+            "Bypassing password protection...",
+            "Disabling security mechanisms...",
+            "Injecting code..."
+        ];
+
+        let i = 0;
+        function typeEffect() {
+            if (i < messages.length) {
+                let span = document.createElement("span");
+                span.classList.add("glitch");
+                span.textContent = "> " + messages[i];
+                terminal.appendChild(span);
+                terminal.appendChild(document.createElement("br"));
+
+                document.getElementById("typingSound").play();
+
+                i++;
+                setTimeout(typeEffect, 2000);
+            } else {
+                setTimeout(() => {
+                    terminal.style.display = "none";
+                    document.getElementById("loveMessage").style.display = "block";
+                    document.getElementById("loveMusic").play();
+                    setTimeout(showExitInput, 5000);
+                }, 3000);
+            }
+        }
+
+        function showExitInput() {
+            document.getElementById("exitMessage").style.display = "block";
+            document.getElementById("exitInput").style.display = "block";
+            document.getElementById("exitInput").focus();
+        }
+
+        document.getElementById("exitInput").addEventListener("input", function() {
+            if (this.value.toLowerCase() === "poojitha") {
+                exitFullscreen();
+            } else if (this.value.toLowerCase() === "poopiii") {
+                // Display poop image and play fart sound
+                document.getElementById("poopImage").style.display = "block";
+                document.getElementById("fartSound").play();
             }
         });
 
